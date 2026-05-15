@@ -12,45 +12,44 @@
 
     body {
       margin: 0;
-      padding: 60px 20px;
       background: #e9e9e9;
       font-family: Arial, sans-serif;
       color: #1f1f1f;
     }
 
     .roi-page {
-      max-width: 980px;
-      margin: 0 auto;
+      min-height: 100vh;
+      padding: 70px 20px;
     }
 
     .roi-header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 70px;
     }
 
     .roi-header h1 {
-      margin: 0 0 22px;
-      font-size: 46px;
+      margin: 0 0 28px;
+      font-size: 56px;
       line-height: 1.1;
       font-weight: 800;
       color: #000;
     }
 
     .roi-header p {
-      max-width: 520px;
+      max-width: 620px;
       margin: 0 auto;
-      font-size: 24px;
+      font-size: 28px;
       line-height: 1.35;
-      color: #222;
+      color: #1f1f1f;
     }
 
     .roi-card {
-      max-width: 760px;
+      max-width: 1060px;
       margin: 0 auto;
-      padding: 52px;
       background: #fff;
-      border-radius: 26px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+      border-radius: 28px;
+      padding: 70px 64px;
+      position: relative;
     }
 
     .roi-step {
@@ -61,236 +60,209 @@
       display: block;
     }
 
-    .roi-progress {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .roi-progress__item {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: #d6d6d6;
-      color: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .roi-progress__item.is-active {
-      background: #1f1f1f;
-      color: #fff;
-    }
-
-    .roi-progress__line {
-      width: 54px;
-      height: 3px;
-      background: #d6d6d6;
-      border-radius: 99px;
-    }
-
-    .roi-progress__line.is-active {
-      background: #1f1f1f;
-    }
-
     .roi-field {
-      margin-bottom: 34px;
+      margin-bottom: 58px;
     }
 
     .roi-field label {
       display: block;
-      margin-bottom: 14px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #1f1f1f;
-    }
-
-    .roi-field__value {
+      margin-bottom: 22px;
+      font-size: 28px;
+      line-height: 1.2;
       font-weight: 800;
     }
 
     .roi-field input[type="range"] {
       width: 100%;
-      accent-color: #1f1f1f;
       cursor: pointer;
-    }
-
-    .roi-input {
-      width: 100%;
-      height: 54px;
-      border: 1px solid #d5d5d5;
-      border-radius: 10px;
-      padding: 0 16px;
-      font-size: 16px;
-      color: #1f1f1f;
-      outline: none;
-    }
-
-    .roi-input:focus {
-      border-color: #1f1f1f;
-    }
-
-    .roi-error {
-      display: none;
-      margin-top: 8px;
-      font-size: 14px;
-      color: #b00020;
-    }
-
-    .roi-field.has-error .roi-error {
-      display: block;
+      accent-color: #1f1f1f;
     }
 
     .roi-actions {
       display: flex;
       justify-content: center;
-      gap: 14px;
-      margin-top: 48px;
+      margin-top: 62px;
     }
 
     .roi-btn {
-      min-width: 220px;
-      min-height: 68px;
       border: 0;
       border-radius: 6px;
       background: #1f1f1f;
       color: #fff;
-      font-size: 18px;
+      padding: 22px 34px;
+      font-size: 20px;
       font-weight: 800;
       text-transform: uppercase;
       cursor: pointer;
-      padding: 18px 28px;
     }
 
     .roi-btn:hover {
       opacity: 0.9;
     }
 
-    .roi-btn--secondary {
+    .roi-close {
+      position: absolute;
+      top: 34px;
+      right: 38px;
+      border: 0;
       background: transparent;
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
       color: #1f1f1f;
-      border: 1px solid #1f1f1f;
     }
 
-    .roi-results {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 24px;
+    .roi-form-wrap {
+      max-width: 590px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .roi-form-wrap h2 {
+      margin: 0 0 36px;
+      text-align: center;
+      font-size: 52px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .roi-input-field {
+      margin-bottom: 30px;
+    }
+
+    .roi-input-field label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    .roi-input-field input {
+      width: 100%;
+      height: 64px;
+      border: 1px solid #777;
+      border-radius: 14px;
+      padding: 0 18px;
+      font-size: 18px;
+      outline: none;
+      background: #fff;
+    }
+
+    .roi-error {
+      display: none;
+      margin-top: 8px;
+      color: #b00020;
+      font-size: 14px;
+    }
+
+    .has-error .roi-error {
+      display: block;
+    }
+
+    .roi-results-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .roi-results-wrap h2 {
+      margin: 0 0 40px;
+      font-size: 32px;
+      font-weight: 400;
     }
 
     .roi-result-card {
-      padding: 28px;
-      border-radius: 18px;
-      background: #f2f2f2;
+      text-align: left;
+      border: 1px solid #777;
+      border-radius: 24px;
+      padding: 30px 40px;
+      margin-bottom: 18px;
     }
 
     .roi-result-card span {
       display: block;
       margin-bottom: 12px;
-      color: #555;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 28px;
+      font-weight: 800;
+      color: #666;
     }
 
     .roi-result-card strong {
       display: block;
-      font-size: 38px;
+      font-size: 46px;
       line-height: 1.1;
-      color: #111;
+      color: #000;
     }
 
-    .roi-result-card--highlight {
-      background: #1f1f1f;
+    .roi-result-text {
+      max-width: 420px;
+      margin: 58px auto 36px;
+      font-size: 26px;
+      line-height: 1.35;
     }
 
-    .roi-result-card--highlight span,
-    .roi-result-card--highlight strong {
-      color: #fff;
-    }
-
-    .roi-summary {
-      margin-top: 30px;
-      padding: 24px;
-      border-radius: 16px;
-      background: #f7f7f7;
-    }
-
-    .roi-summary h3 {
-      margin: 0 0 16px;
-      font-size: 22px;
-    }
-
-    .roi-summary ul {
-      margin: 0;
-      padding-left: 20px;
-      line-height: 1.8;
-    }
-
-    .roi-note {
-      margin-top: 28px;
-      color: #555;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .roi-lead-title {
-      text-align: center;
-      margin: 0 0 12px;
-      font-size: 32px;
-      line-height: 1.2;
-    }
-
-    .roi-lead-desc {
-      text-align: center;
-      max-width: 520px;
-      margin: 0 auto 36px;
-      color: #555;
-      line-height: 1.6;
-      font-size: 17px;
+    .roi-link {
+      display: inline-block;
+      color: #1f1f1f;
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 6px;
     }
 
     @media (max-width: 767px) {
-      body {
-        padding: 40px 18px;
+      .roi-page {
+        padding: 44px 18px;
+      }
+
+      .roi-header {
+        margin-bottom: 42px;
       }
 
       .roi-header h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .roi-header p {
-        font-size: 19px;
+        font-size: 20px;
       }
 
       .roi-card {
-        padding: 30px 22px;
+        padding: 42px 24px;
       }
 
       .roi-field label {
-        font-size: 18px;
-      }
-
-      .roi-actions {
-        flex-direction: column;
+        font-size: 22px;
       }
 
       .roi-btn {
         width: 100%;
-        min-width: 0;
+        font-size: 17px;
       }
 
-      .roi-results {
-        grid-template-columns: 1fr;
+      .roi-form-wrap h2 {
+        font-size: 38px;
+      }
+
+      .roi-input-field label {
+        font-size: 21px;
+      }
+
+      .roi-result-card {
+        padding: 24px;
+      }
+
+      .roi-result-card span {
+        font-size: 22px;
       }
 
       .roi-result-card strong {
-        font-size: 32px;
+        font-size: 36px;
+      }
+
+      .roi-result-text {
+        font-size: 21px;
       }
     }
   </style>
@@ -306,122 +278,89 @@
 
     <section class="roi-card">
 
-      <div class="roi-progress" aria-label="Calculator progress">
-        <div class="roi-progress__item is-active" data-progress-step="1">1</div>
-        <div class="roi-progress__line" data-progress-line="1"></div>
-        <div class="roi-progress__item" data-progress-step="2">2</div>
-        <div class="roi-progress__line" data-progress-line="2"></div>
-        <div class="roi-progress__item" data-progress-step="3">3</div>
-      </div>
-
       <!-- STEP 1 -->
       <div class="roi-step is-active" data-step="1">
-
         <div class="roi-field">
           <label>
             Number of employees:
-            <span class="roi-field__value" id="employeesValue">50</span>
+            $<span id="employeesValue">0</span>
           </label>
-          <input type="range" id="employees" min="1" max="500" value="50" />
+          <input type="range" id="employees" min="0" max="500" value="0">
         </div>
 
         <div class="roi-field">
           <label>
             Average hourly wage:
-            <span class="roi-field__value">$<span id="wageValue">40</span></span>
+            $<span id="wageValue">0</span>
           </label>
-          <input type="range" id="wage" min="10" max="200" value="40" />
+          <input type="range" id="wage" min="0" max="200" value="0">
         </div>
 
         <div class="roi-field">
           <label>
             How many concurrent projects do you have running at a time?
-            <span class="roi-field__value" id="projectsValue">10</span>
+            <span id="projectsValue">0</span>
           </label>
-          <input type="range" id="projects" min="1" max="100" value="10" />
+          <input type="range" id="projects" min="0" max="100" value="0">
         </div>
 
         <div class="roi-actions">
-          <button class="roi-btn" type="button" id="goToLeadStep">
+          <button class="roi-btn" type="button" id="goToForm">
             Calculate Your Savings
           </button>
         </div>
-
       </div>
 
       <!-- STEP 2 -->
       <div class="roi-step" data-step="2">
+        <button class="roi-close" type="button" data-back="1">×</button>
 
-        <h2 class="roi-lead-title">Get your savings estimate</h2>
-        <p class="roi-lead-desc">
-          Enter your details to view the estimated monthly and annual savings for your team.
-        </p>
+        <div class="roi-form-wrap">
+          <h2>Unlock your results</h2>
 
-        <div class="roi-field" id="nameField">
-          <label for="fullName">Name</label>
-          <input class="roi-input" type="text" id="fullName" placeholder="Enter your name" />
-          <div class="roi-error">Please enter your name.</div>
+          <div class="roi-input-field" id="nameField">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName">
+            <div class="roi-error">Please enter your full name.</div>
+          </div>
+
+          <div class="roi-input-field" id="emailField">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <div class="roi-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="roi-actions">
+            <button class="roi-btn" type="button" id="goToResults">
+              Continue To Results
+            </button>
+          </div>
         </div>
-
-        <div class="roi-field" id="emailField">
-          <label for="email">Email</label>
-          <input class="roi-input" type="email" id="email" placeholder="Enter your email" />
-          <div class="roi-error">Please enter a valid email address.</div>
-        </div>
-
-        <div class="roi-actions">
-          <button class="roi-btn roi-btn--secondary" type="button" id="backToCalculator">
-            Back
-          </button>
-
-          <button class="roi-btn" type="button" id="showResults">
-            View Results
-          </button>
-        </div>
-
       </div>
 
       <!-- STEP 3 -->
       <div class="roi-step" data-step="3">
+        <button class="roi-close" type="button" data-back="1">×</button>
 
-        <h2 class="roi-lead-title">Your estimated savings</h2>
-        <p class="roi-lead-desc">
-          Based on the information provided, here is your potential savings estimate.
-        </p>
+        <div class="roi-results-wrap">
+          <h2>Your savings:</h2>
 
-        <div class="roi-results">
           <div class="roi-result-card">
             <span>Estimated Monthly Savings</span>
             <strong id="monthlySavings">$0</strong>
           </div>
 
-          <div class="roi-result-card roi-result-card--highlight">
+          <div class="roi-result-card">
             <span>Estimated Annual Savings</span>
             <strong id="annualSavings">$0</strong>
           </div>
+
+          <p class="roi-result-text">
+            No more siloed folder structures with duplicate or outdated documents.
+          </p>
+
+          <a href="#" class="roi-link">Speak To An Expert</a>
         </div>
-
-        <div class="roi-summary">
-          <h3>Your inputs</h3>
-          <ul>
-            <li>Employees: <strong id="summaryEmployees">50</strong></li>
-            <li>Average hourly wage: <strong id="summaryWage">$40</strong></li>
-            <li>Concurrent projects: <strong id="summaryProjects">10</strong></li>
-            <li>Search time benchmark: <strong>1.8 hours/day</strong></li>
-            <li>Efficiency improvement: <strong>40%</strong></li>
-          </ul>
-        </div>
-
-        <p class="roi-note">
-          This estimate is based on 20 workdays per month and 240 workdays per year.
-        </p>
-
-        <div class="roi-actions">
-          <button class="roi-btn roi-btn--secondary" type="button" id="backToLeadStep">
-            Back
-          </button>
-        </div>
-
       </div>
 
     </section>
@@ -436,29 +375,18 @@
     const wageValue = document.getElementById("wageValue");
     const projectsValue = document.getElementById("projectsValue");
 
+    const monthlySavings = document.getElementById("monthlySavings");
+    const annualSavings = document.getElementById("annualSavings");
+
     const fullNameInput = document.getElementById("fullName");
     const emailInput = document.getElementById("email");
     const nameField = document.getElementById("nameField");
     const emailField = document.getElementById("emailField");
 
-    const monthlySavings = document.getElementById("monthlySavings");
-    const annualSavings = document.getElementById("annualSavings");
-
-    const summaryEmployees = document.getElementById("summaryEmployees");
-    const summaryWage = document.getElementById("summaryWage");
-    const summaryProjects = document.getElementById("summaryProjects");
-
-    const goToLeadStepBtn = document.getElementById("goToLeadStep");
-    const backToCalculatorBtn = document.getElementById("backToCalculator");
-    const showResultsBtn = document.getElementById("showResults");
-    const backToLeadStepBtn = document.getElementById("backToLeadStep");
-
     const SEARCH_HOURS_PER_DAY = 1.8;
     const EFFICIENCY_IMPROVEMENT = 0.40;
     const WORKDAYS_PER_MONTH = 20;
     const WORKDAYS_PER_YEAR = 240;
-
-    let roiCalculatorData = {};
 
     function formatCurrency(value) {
       return new Intl.NumberFormat("en-US", {
@@ -484,101 +412,74 @@
       monthlySavings.textContent = formatCurrency(monthly);
       annualSavings.textContent = formatCurrency(annual);
 
-      summaryEmployees.textContent = employees;
-      summaryWage.textContent = formatCurrency(wage);
-      summaryProjects.textContent = projects;
-
-      roiCalculatorData = {
-        name: fullNameInput.value.trim(),
+      window.roiCalculatorData = {
+        fullName: fullNameInput.value.trim(),
         email: emailInput.value.trim(),
-        employees: employees,
+        employees,
         hourlyWage: wage,
         concurrentProjects: projects,
         searchHoursPerDay: SEARCH_HOURS_PER_DAY,
-        dailyWastedCost: Math.round(dailyWastedCost),
         monthlySavings: Math.round(monthly),
         annualSavings: Math.round(annual)
       };
-
-      window.roiCalculatorData = roiCalculatorData;
     }
 
     function goToStep(stepNumber) {
-      document.querySelectorAll(".roi-step").forEach(function (step) {
+      document.querySelectorAll(".roi-step").forEach(step => {
         step.classList.remove("is-active");
       });
 
-      document.querySelector('[data-step="' + stepNumber + '"]').classList.add("is-active");
-
-      document.querySelectorAll(".roi-progress__item").forEach(function (item) {
-        const itemStep = Number(item.getAttribute("data-progress-step"));
-
-        item.classList.toggle("is-active", itemStep <= stepNumber);
-      });
-
-      document.querySelectorAll(".roi-progress__line").forEach(function (line) {
-        const lineStep = Number(line.getAttribute("data-progress-line"));
-
-        line.classList.toggle("is-active", lineStep < stepNumber);
-      });
-
+      document.querySelector(`[data-step="${stepNumber}"]`).classList.add("is-active");
       calculateSavings();
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    function validateLeadForm() {
-      let isValid = true;
-
-      const name = fullNameInput.value.trim();
-      const email = emailInput.value.trim();
+    function validateForm() {
+      let valid = true;
 
       nameField.classList.remove("has-error");
       emailField.classList.remove("has-error");
 
-      if (!name) {
+      if (!fullNameInput.value.trim()) {
         nameField.classList.add("has-error");
-        isValid = false;
+        valid = false;
       }
 
-      if (!email || !isValidEmail(email)) {
+      if (!isValidEmail(emailInput.value.trim())) {
         emailField.classList.add("has-error");
-        isValid = false;
+        valid = false;
       }
 
-      return isValid;
+      return valid;
     }
 
     employeesInput.addEventListener("input", calculateSavings);
     wageInput.addEventListener("input", calculateSavings);
     projectsInput.addEventListener("input", calculateSavings);
-
     fullNameInput.addEventListener("input", calculateSavings);
     emailInput.addEventListener("input", calculateSavings);
 
-    goToLeadStepBtn.addEventListener("click", function () {
+    document.getElementById("goToForm").addEventListener("click", () => {
       calculateSavings();
       goToStep(2);
     });
 
-    backToCalculatorBtn.addEventListener("click", function () {
-      goToStep(1);
-    });
-
-    showResultsBtn.addEventListener("click", function () {
-      if (!validateLeadForm()) return;
+    document.getElementById("goToResults").addEventListener("click", () => {
+      if (!validateForm()) return;
 
       calculateSavings();
       goToStep(3);
 
-      console.log("ROI calculator data:", window.roiCalculatorData);
+      console.log("ROI Calculator Data:", window.roiCalculatorData);
     });
 
-    backToLeadStepBtn.addEventListener("click", function () {
-      goToStep(2);
+    document.querySelectorAll(".roi-close").forEach(button => {
+      button.addEventListener("click", () => {
+        goToStep(button.getAttribute("data-back"));
+      });
     });
 
     calculateSavings();
