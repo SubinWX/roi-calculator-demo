@@ -1,0 +1,378 @@
+<div class="roi-wrapper">
+
+  <!-- CALCULATOR -->
+  <div class="roi-calculator">
+
+    <div class="roi-header">
+      <h2>Calculate Your Potential Savings</h2>
+      <p>See how much money your team could save by improving document search efficiency.</p>
+    </div>
+
+    <!-- Employees -->
+    <div class="roi-field">
+      <label>
+        Number of employees:
+        <strong id="employeesValue">50</strong>
+      </label>
+      <input type="range" id="employees" min="1" max="500" value="50">
+    </div>
+
+    <!-- Hourly Wage -->
+    <div class="roi-field">
+      <label>
+        Average hourly wage:
+        <strong>$<span id="wageValue">40</span></strong>
+      </label>
+      <input type="range" id="wage" min="10" max="200" value="40">
+    </div>
+
+    <!-- Concurrent Projects -->
+    <div class="roi-field">
+      <label>
+        How many concurrent projects do you have running at a time?
+        <strong id="projectsValue">10</strong>
+      </label>
+      <input type="range" id="projects" min="1" max="100" value="10">
+    </div>
+
+    <!-- Results -->
+    <div class="roi-results">
+      <div class="roi-result-card">
+        <span>Estimated Monthly Savings</span>
+        <strong id="monthlySavings">$0</strong>
+      </div>
+
+      <div class="roi-result-card roi-result-card--highlight">
+        <span>Estimated Annual Savings</span>
+        <strong id="annualSavings">$0</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EXPLANATION -->
+  <div class="roi-explanation">
+    <h2>How The Savings Are Calculated</h2>
+
+    <div class="roi-step">
+      <h3>Step 1 — Daily Wasted Cost</h3>
+
+      <p><strong>Formula:</strong></p>
+      <div class="roi-formula">
+        Daily Wasted Cost = (# employees) × (1.8 hours) × (hourly wage)
+      </div>
+
+      <p><strong>Example:</strong></p>
+      <ul>
+        <li>50 employees</li>
+        <li>$40/hour wage</li>
+        <li>1.8 hours wasted per day</li>
+      </ul>
+
+      <div class="roi-calculation">
+        50 × 1.8 × 40 = 3,600
+      </div>
+
+      <p><strong>Daily Wasted Cost = $3,600/day</strong></p>
+
+      <p>
+        Meaning: The company loses about $3,600 every day because employees spend time searching for documents and information.
+      </p>
+    </div>
+
+    <div class="roi-step">
+      <h3>Step 2 — Monthly Savings</h3>
+
+      <p>M-Files improves search efficiency by <strong>40%</strong>.</p>
+
+      <p>So the tool assumes:</p>
+
+      <div class="roi-formula">
+        40% of that wasted cost can be recovered
+      </div>
+
+      <p><strong>Formula:</strong></p>
+      <div class="roi-formula">
+        Monthly Savings = (Daily Wasted Cost × 20 days) × 0.40
+      </div>
+
+      <p><strong>Calculation:</strong></p>
+      <div class="roi-calculation">
+        3,600 × 20 = 72,000<br><br>
+        72,000 × 0.40 = 28,800
+      </div>
+
+      <p><strong>Estimated Monthly Savings = $28,800</strong></p>
+    </div>
+
+    <div class="roi-step">
+      <h3>Step 3 — Annual Savings</h3>
+
+      <p><strong>Formula:</strong></p>
+      <div class="roi-formula">
+        Annual Savings = (Daily Wasted Cost × 240 days) × 0.40
+      </div>
+
+      <p><strong>Calculation:</strong></p>
+      <div class="roi-calculation">
+        3,600 × 240 = 864,000<br><br>
+        864,000 × 0.40 = 345,600
+      </div>
+
+      <p><strong>Estimated Annual Savings = $345,600</strong></p>
+    </div>
+
+    <div class="roi-note">
+      <p>
+        So the “hours” are not missing — they are already converted into money during the Daily Wasted Cost calculation by multiplying:
+      </p>
+
+      <div class="roi-formula">
+        hours wasted × hourly wage
+      </div>
+
+      <p>That converts lost time into lost money.</p>
+
+      <p>
+        Note: Concurrent projects are captured for enrichment only and do not affect the savings calculation.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+    color: #0e151b;
+  }
+
+  .roi-wrapper {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .roi-calculator,
+  .roi-explanation {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  }
+
+  .roi-calculator {
+    margin-bottom: 50px;
+  }
+
+  .roi-header {
+    margin-bottom: 32px;
+  }
+
+  .roi-header h2,
+  .roi-explanation h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .roi-explanation h2 {
+    margin-bottom: 40px;
+  }
+
+  .roi-header p {
+    margin: 0;
+    line-height: 1.6;
+    color: #5f6b76;
+  }
+
+  .roi-field {
+    margin-bottom: 28px;
+  }
+
+  .roi-field label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .roi-field input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .roi-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .roi-result-card {
+    padding: 24px;
+    border-radius: 18px;
+    background: #f4f6f8;
+  }
+
+  .roi-result-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: #5f6b76;
+    font-size: 14px;
+  }
+
+  .roi-result-card strong {
+    display: block;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .roi-result-card--highlight {
+    background: #0e151b;
+    color: #ffffff;
+  }
+
+  .roi-result-card--highlight span,
+  .roi-result-card--highlight strong {
+    color: #ffffff;
+  }
+
+  .roi-step {
+    margin-bottom: 50px;
+  }
+
+  .roi-step h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  .roi-step p,
+  .roi-note p {
+    line-height: 1.7;
+    color: #33414d;
+  }
+
+  .roi-step ul {
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+
+  .roi-formula {
+    padding: 18px 20px;
+    background: #f4f6f8;
+    border-radius: 14px;
+    margin: 16px 0 24px;
+    font-weight: 700;
+    overflow-x: auto;
+  }
+
+  .roi-calculation {
+    padding: 18px 20px;
+    background: #0e151b;
+    color: #ffffff;
+    border-radius: 14px;
+    margin: 16px 0 24px;
+    line-height: 1.8;
+    font-weight: 700;
+  }
+
+  .roi-note {
+    padding: 28px;
+    border-radius: 18px;
+    background: #f4f6f8;
+  }
+
+  @media (max-width: 767px) {
+    body {
+      padding: 20px;
+    }
+
+    .roi-calculator,
+    .roi-explanation {
+      padding: 24px;
+    }
+
+    .roi-header h2,
+    .roi-explanation h2 {
+      font-size: 28px;
+    }
+
+    .roi-step h3 {
+      font-size: 22px;
+    }
+
+    .roi-results {
+      grid-template-columns: 1fr;
+    }
+
+    .roi-result-card strong {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<script>
+  const employeesInput = document.getElementById("employees");
+  const wageInput = document.getElementById("wage");
+  const projectsInput = document.getElementById("projects");
+
+  const employeesValue = document.getElementById("employeesValue");
+  const wageValue = document.getElementById("wageValue");
+  const projectsValue = document.getElementById("projectsValue");
+
+  const monthlySavings = document.getElementById("monthlySavings");
+  const annualSavings = document.getElementById("annualSavings");
+
+  const SEARCH_HOURS_PER_DAY = 1.8;
+  const EFFICIENCY_IMPROVEMENT = 0.40;
+  const WORKDAYS_PER_MONTH = 20;
+  const WORKDAYS_PER_YEAR = 240;
+
+  function formatCurrency(value) {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 0
+    }).format(value);
+  }
+
+  function calculateSavings() {
+    const employees = Number(employeesInput.value);
+    const wage = Number(wageInput.value);
+    const projects = Number(projectsInput.value);
+
+    const dailyWastedCost = employees * SEARCH_HOURS_PER_DAY * wage;
+    const monthly = dailyWastedCost * WORKDAYS_PER_MONTH * EFFICIENCY_IMPROVEMENT;
+    const annual = dailyWastedCost * WORKDAYS_PER_YEAR * EFFICIENCY_IMPROVEMENT;
+
+    employeesValue.textContent = employees;
+    wageValue.textContent = wage;
+    projectsValue.textContent = projects;
+
+    monthlySavings.textContent = formatCurrency(monthly);
+    annualSavings.textContent = formatCurrency(annual);
+
+    // For HubSpot later
+    window.roiCalculatorData = {
+      employees: employees,
+      hourlyWage: wage,
+      concurrentProjects: projects,
+      searchHoursPerDay: SEARCH_HOURS_PER_DAY,
+      monthlySavings: Math.round(monthly),
+      annualSavings: Math.round(annual)
+    };
+  }
+
+  employeesInput.addEventListener("input", calculateSavings);
+  wageInput.addEventListener("input", calculateSavings);
+  projectsInput.addEventListener("input", calculateSavings);
+
+  calculateSavings();
+</script>
